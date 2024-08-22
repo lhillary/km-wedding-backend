@@ -1,0 +1,31 @@
+{
+  "name": "hhitchin-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Humphrey Hillary Hitchin API",
+  "main": "server.js",
+  "engines": {
+    "node": "14.x"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-jwt": "^6.0.0",
+    "jwks-rsa": "^2.0.3",
+    "nodemon": "^1.19.4",
+    "pg": "^8.5.1",
+    "postgres": "^1.0.2",
+    "twilio": "^3.62.0"
+  },
+  "devDependencies": {
+    "twilio": "^3.62.0"
+  }
+}

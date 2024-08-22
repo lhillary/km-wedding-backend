@@ -43,21 +43,9 @@ const getDeclinedContacts = (request, response) => {
     });
 }
 
-const getKlayo = (request, response) => {
-    const errorId1 = 72;
-
-    pool.query('SELECT * FROM Contacts WHERE Id = $1', [errorId1], (error, results) => {
-        if (error) {
-            throw error;
-        }
-        response.status(200).json(results.rows);
-    });
-}
-
 module.exports = {
     getContacts,
     getChaseContacts,
     getAttendingContacts,
     getDeclinedContacts,
-    getKlayo
 }

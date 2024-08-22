@@ -54,7 +54,6 @@ app.get('/', (req, res) => {
 //crud
 app.get('/contacts', checkJwt, db.getContacts);
 app.get('/chase', checkJwt, db.getChaseContacts);
-app.get('/klayo', checkJwt, db.getKlayo);
 app.get('/attending', checkJwt, db.getAttendingContacts);
 app.get('/declined', checkJwt, db.getDeclinedContacts);
 app.post('/send', checkJwt, msg.sendMessage);

@@ -38,7 +38,7 @@ const checkJwt = jwt({
 
 // disable in development
 const origin = {
-  origin: ['https://dashboard.humphreyhillaryhitchin.com','http://localhost:8080']
+  origin: ['https://dashboard.katie-mike-wedding.com','http://localhost:8080']
 }
 
 

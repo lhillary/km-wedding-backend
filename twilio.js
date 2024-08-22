@@ -71,7 +71,7 @@ const parseMessagesReceived = (request, response) => {
             }
         )
 
-        twiml.message('Yay! Can\'t wait to see you! \n\nWe\'re gonna party hardy! See you there! \n\nPlease text 1 if you\'re bringing a guest, spouse, or significant other.');
+        twiml.message('Yay! Can\'t wait to see you! \n\nWe\'re gonna party hardy! See you there! \n\nPlease text 1 if you\'re bringing a guest.');
     } else if (userResponse.indexOf('no') > -1 || userResponse == 'no' || userResponse == 'n') {
 
         pool.query(
@@ -99,7 +99,7 @@ const parseMessagesReceived = (request, response) => {
 
         twiml.message('Awesome! Looking forward to seeing y\'all!');
     } else {
-        twiml.message('What\'s that? You kiss your mother with that mouth? \n\nIf you meant something else and butt-dialed, email or text Diana at Diana.h84@gmail.com or 989-975-2128.');
+        twiml.message('What\'s that? You kiss your mother with that mouth? \n\nIf you meant something else and butt-dialed, email or text Katie at katie.schramm19@gmail.com or 989-297-4007.');
     }
 
     response.writeHead(200, {'Content-Type': 'text/xml'});

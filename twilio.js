@@ -26,11 +26,11 @@ client.messages
 }
 
 const getMessageLogs = (request, response) => {
-    if (request.body.number == "") {
-        data = { limit: 100 };
-    } else {
-        data = { limit: 100, from: request.body.number };
-    }
+    const data = {
+        limit: 100, 
+        from: request.body.number || undefined, 
+        dateSentAfter: request.body.dateSentAfter || undefined,
+    };
 
     client.messages.list(data)
         .then(function(messages) {
@@ -71,7 +71,7 @@ const parseMessagesReceived = (request, response) => {
             }
         )
 
-        twiml.message('Yay! Can\'t wait to see you! \n\nWe\'re gonna party hardy! See you there! \n\nPlease text 1 if you\'re bringing a guest.');
+        twiml.message('Yay! Can\'t wait to see you! \n\nWe\'re gonna party hardy! See you there! \n\nPlease text 1 if you\'re bringing your partner/spouse/guest.');
     } else if (userResponse.indexOf('no') > -1 || userResponse == 'no' || userResponse == 'n') {
 
         pool.query(

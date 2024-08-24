@@ -56,7 +56,7 @@ app.get('/contacts', checkJwt, db.getContacts);
 app.get('/chase', checkJwt, db.getChaseContacts);
 app.get('/attending', checkJwt, db.getAttendingContacts);
 app.get('/declined', checkJwt, db.getDeclinedContacts);
-app.get('/parents', checkJwt, db.getKlayo);
+app.get('/parents', checkJwt, db.getKatieParents);
 app.post('/send', checkJwt, msg.sendMessage);
 app.post('/fetch-logs', checkJwt, msg.getMessageLogs);
 app.post('/receive', msg.parseMessagesReceived);

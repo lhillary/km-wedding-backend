@@ -43,9 +43,21 @@ const getDeclinedContacts = (request, response) => {
     });
 }
 
+const getKatieParents = (request, response) => {
+    const errorId1 = 13;
+
+    pool.query('SELECT * FROM Contacts WHERE Id = $1', [errorId1], (error, results) => {
+        if (error) {
+            throw error;
+        }
+        response.status(200).json(results.rows);
+    });
+}
+
 module.exports = {
     getContacts,
     getChaseContacts,
     getAttendingContacts,
     getDeclinedContacts,
+	getKatieParents,
 }

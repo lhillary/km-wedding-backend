@@ -8,4 +8,4 @@ CREATE TABLE Contacts (
 );
 
 INSERT INTO Contacts (Name, Phone, Responded, Attending, Number) 
-VALUES ('Lydia Hillary', '+13137275279', 'f', 'f', 0);
+VALUES ('Keith Schramm', '+19897517805', 'f', 'f', 0);
